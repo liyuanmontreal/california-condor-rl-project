@@ -1,0 +1,72 @@
+env:
+  K: 800
+
+  Nj0: 74
+  Ns0: 74
+  Na0: 221
+  C0: 197
+  H0: 1.0
+
+  # Survival
+  sj_base: 0.72
+  ss_base: 0.86
+  sa_base: 0.93
+
+  # Reproduction → 高一点便于 RL 探索
+  fecundity_per_adult: 0.45
+  habitat_repro_sensitivity: 0.30
+
+  # Lead → 风险低一些，mitigation 更有效
+  lead_j_base: 0.04
+  lead_s_base: 0.10
+  lead_a_base: 0.12
+  lead_mitigation_effect: 0.75
+  habitat_lead_sensitivity: 0.50
+
+  # Release → 生存率更高、密度惩罚更低
+  release_base_survival: 0.85
+  release_density_sensitivity: 0.3
+
+  # Disaster
+  disaster_base_prob: 0.02
+  disaster_mortality_frac: 0.20
+  disaster_habitat_sensitivity: 1.0
+
+  # Captive & Habitat
+  captive_recruitment_rate: 0.05
+  C_cap: 400
+  habitat_baseline: 1.0
+  habitat_recovery_rate: 0.03
+  habitat_mitigation_effect: 0.08
+  habitat_min: 0.3
+  habitat_max: 1.3
+
+reward:
+  target_low: 650
+  target_high: 700
+  w_low: 20
+  w_high: 1
+  lambda_release: 0.2
+  lambda_mitigation: 0.1
+  lambda_disaster: 20.0
+
+sim:
+  horizon: 120
+  N_rollouts: 20
+  seed: 999
+
+actions:
+  release_min: 0
+  release_max: 20
+  release_step: 1
+  mitigation_min: 0.0
+  mitigation_max: 1.0
+  mitigation_step: 0.1
+
+train:
+  gamma: 0.99
+  n_iterations: 25
+  n_episodes: 300
+  horizon: 100
+  random_seed: 999
+  save_model_path: "trained_fqi_age3_optimistic.npy"

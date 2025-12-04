@@ -1,0 +1,11 @@
+numpy
+pandas
+matplotlib
+seaborn
+cvxpy
+scipy
+stable-baselines3
+gymnasium
+gym
+shimmy>=2.0
+pillow
