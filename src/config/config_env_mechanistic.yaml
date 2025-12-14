@@ -27,8 +27,8 @@ env:
   habitat_lead_sensitivity: 0.60
 
   # ---- Disaster ----
-  disaster_base_prob: 0.03
-  disaster_mortality_frac: 0.30
+  disaster_base_prob: 0.04
+  disaster_mortality_frac: 0.20
   disaster_habitat_sensitivity: 0.8
 
   # ---- Release ----
