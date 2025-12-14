@@ -35,7 +35,7 @@ python src/analysis/plot_phase3_policy_heatmap_stategrid.py
 
 ## mpc
 ```bash
-python src/analysis/run_mpc_dynamic_target.py
+python src/analysis/run_mpc_condor_env_age3.py
 ```
 
 project 
